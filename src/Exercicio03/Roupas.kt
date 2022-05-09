@@ -2,7 +2,7 @@ package Exercicio03
 
 class Roupas : Peca() {
     override fun retirada() {
-        println("Roupa retirada!")
+        println("Retirado com Sucesso")
     }
 
     fun informarQtd() {

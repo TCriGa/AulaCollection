@@ -9,8 +9,6 @@ class MenuPeca {
     val roupas = Roupas()
 
 
-
-
     fun boasVindas() {
         println("|---------------Digite a opção desejada--------------------------------|")
         println("|---------------01 - Inserir Roupas -----------------------------------|")
@@ -26,7 +24,8 @@ class MenuPeca {
             boasVindas()
             try {
                 when (readln().toInt()) {
-                    1 -> {roupas.informarQtd()
+                    1 -> {
+                        roupas.informarQtd()
                         val listaRoupas = roupas.inserirDados()
                         guardaVolumes.guardarPeca(listaRoupas.toMutableList())
 
@@ -38,16 +37,22 @@ class MenuPeca {
                         val listaAcessorios = acessorios.inserirDados()
                         guardaVolumes.guardarPeca(listaAcessorios.toMutableList())
                     }
-                    3 ->guardaVolumes.retirarPeca()
+                    3 -> {
+                        guardaVolumes.retirarPeca()
+                        acessorios.retirada()
 
-                    4 -> {guardaVolumes.mostrarPeca()
+                    }
+
+                    4 -> {
+                        guardaVolumes.mostrarPeca()
 
                     }
 
                     5 -> {
                         println("Obrigada por utlizar nosso sistema!! :)")
                         exitProcess(0)
-                    } else -> println("Opção inválida. Digite novamente")
+                    }
+                    else -> println("Opção inválida. Digite novamente")
 
 
                 }

@@ -2,7 +2,7 @@ package Exercicio03
 
 class Acessorios :Peca(){
     override fun retirada() {
-        println("Acessório retirado")
+        println("Retirado com Sucesso")
     }
     fun informarQtd() {
        try {
